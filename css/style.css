@@ -139,12 +139,12 @@ section:nth-of-type(even) {
 }
 
 /* ! Temporaneo */
-section:nth-of-type(odd) {
+section:nth-of-type(odd + 3) {
     background-color: turquoise;
 }
 
 /* ! Temporaneo */
-section>* {
+section>*:not(:first-of-type) {
     border: 2px dashed white;
 }
 
@@ -160,6 +160,7 @@ section {
 
 #payment-plans h2 {
     margin-bottom: 60px;
+    font-size: 45px;
 }
 
 .check-bar {
@@ -194,28 +195,88 @@ section {
 
 .col {
     flex-basis: calc(100% / 3);
-    padding: 20px 10px;
-    height: 600px;
-    border: 2px dashed white;
-    flex-grow: 1;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 25px 0;
+}
+
+.full-row {
+    flex-basis: 100%;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.card-side:first-of-type>* {
+    margin-bottom: 30px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
     border: 1px solid black;
+    padding: 30px 20px;
 }
 
-.card .plan-type {
+.col:not(.full-row) .card {
+    flex-direction: column;
+    gap: 30px;
+    display: flex;
+    height: 100%;
+}
+
+.plan-type {
+    padding: 10px 0;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    text-align: center;
+}
+
+#payment-plans h4 {
+    font-size: 2rem;
+}
+
+.cadence {
+    color: grey;
+}
+
+.fa-ul {
+    margin-left: 25px;
+}
+
+
+.card .btn {
+    width: 240px;
     text-align: center;
 }
 
 .btn-centered {
     margin: 0 auto;
+}
+
+.link-blue {
+    text-decoration: underline;
+    color: blue;
+}
+
+#payment-plans h5 {
+    font-size: 1.1rem;
+}
+
+#payment-plans ul {
+    list-style-position: outside;
+}
+
+#payment-plans li {
+    margin-bottom: 20px;
+}
+
+.main-features .fa-li {
+    color: blue;
 }
 
 /* Sezione partners */
