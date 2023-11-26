@@ -17,6 +17,10 @@ img {
     display: block;
 }
 
+address {
+    font-style: normal;
+}
+
 /* Utils */
 ul {
     list-style-type: none;
@@ -61,10 +65,60 @@ a {
     margin: 0 auto;
 }
 
-/* ! Temporaneo */
-.content {
-    width: 960px;
-    height: 600px;
+.small-content {
+    flex-basis: calc(100% * 0.4);
+    padding: 60px 40px;
+}
+
+.large-content {
+    flex-basis: calc(100% * 0.6);
+
+}
+
+.bg-pale-green {
+    background-color: hsl(100.38deg 36.11% 71.76%);
+}
+
+.bg-purple {
+    background-color: hsl(339.69deg 60.75% 20.98%);
+}
+
+.bg-light-blue {
+    background-color: hsl(207.23deg 56.03% 54.51%);
+}
+
+.bg-light-red {
+    background-color: hsl(9.49deg 79.03% 51.37%);
+}
+
+.bg-dark-red {
+    background-color: hsl(4.62deg 69.64% 43.92%);
+}
+
+.bg-periwinkle {
+    background-color: hsl(212.09deg 46.24% 81.76%);
+}
+
+.bg-dark-blue {
+    background-color: hsl(231.26deg 68.21% 29.61%);
+}
+
+.bg-yellow {
+    background-color: hsl(50deg 90.91% 61.18%);
+}
+
+.bg-light-grey {
+    background-color: hsl(0deg 0% 96.08%);
+}
+
+.position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+#users-collaboration .small-container {
     display: flex;
 }
 
@@ -99,10 +153,9 @@ header ul {
 /* JUMBOTRON */
 
 .jumbotron {
-    background-color: hsl(212.09deg 46.24% 81.76%);
     display: flex;
     align-items: center;
-    padding-top: 60px;
+    width: 100vw;
 }
 
 .jumbotron .large-container {
@@ -119,38 +172,34 @@ h1 {
     display: flex;
 }
 
-.small-content {
-    flex-basis: calc(100% * 0.4);
-    padding: 60px 40px;
+.jumbotron .small-content {
+    flex-basis: calc(100% * 0.3);
+    padding: 0 0;
 }
 
 .small-content>* {
     margin-bottom: 40px;
 }
 
-.large-content {
-    flex-basis: calc(100% * 0.6);
+.jumbotron .large-content {
+    flex-basis: calc(100% * 0.7);
+}
+
+.jumbotron .large-container img {
+    max-height: 100%;
+    width: auto;
 }
 
 /* Main */
 
 /* ! Temporaneo */
-section:nth-of-type(evenn + 4) {
+section:nth-of-type(2n + 6) {
     background-color: orange;
-}
-
-/* ! Temporaneo */
-section:nth-of-type(oddn + 3) {
-    background-color: turquoise;
-}
-
-/* ! Temporaneo */
-section>*:not(:first-of-type) {
-    border: 2px dashed white;
 }
 
 section {
     padding: 100px 0;
+    width: 100vw;
 }
 
 /* Sezione payment plans */
@@ -280,15 +329,29 @@ section {
     color: blue;
 }
 
+/* Sezione Dropbox utils */
+
+#dropbox-utils h2 {
+    font-size: 2.3rem;
+}
+
+#dropbox-utils .card {
+    border: none;
+}
+
+#dropbox-utils h3 {
+    font-size: 22px;
+}
+
 /* Sezione partners */
+
+#partners {
+    padding: 0;
+}
 
 #partners h2 {
     margin-bottom: 80px;
-}
-
-#partners a {
-    color: hsl(226.55deg 86.14% 60.39%);
-    text-decoration: underline;
+    font-size: 45px;
 }
 
 .container-free {
@@ -305,10 +368,37 @@ section {
     flex-wrap: wrap;
 }
 
+.banner-squared:nth-of-type(2) {
+    padding: 50px 50px;
+    display: block;
+}
+
+.banner-squared hr {
+    color: grey;
+    width: 20%;
+}
+
+.banner-squared:nth-of-type(2)>* {
+    margin-bottom: 50px;
+}
+
+.banner-squared>img {
+    max-width: 50%;
+    height: auto;
+}
+
 .banner-small {
     flex-basis: calc(100% / 2);
     height: calc(100% / 2);
-    border: 1px dashed white;
+    position: relative;
+}
+
+.banner-small:not(.bg-yellow)>img {
+    padding: 0 60px;
+}
+
+.banner-small img {
+    filter: invert();
 }
 
 /* Sezione Free Trial */
