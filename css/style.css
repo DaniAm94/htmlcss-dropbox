@@ -120,7 +120,8 @@ h1 {
 }
 
 .small-content {
-    flex-basis: calc(100% * 0.3);
+    flex-basis: calc(100% * 0.4);
+    padding: 60px 40px;
 }
 
 .small-content>* {
@@ -128,18 +129,18 @@ h1 {
 }
 
 .large-content {
-    flex-basis: calc(100% * 0.7);
+    flex-basis: calc(100% * 0.6);
 }
 
 /* Main */
 
 /* ! Temporaneo */
-section:nth-of-type(even) {
+section:nth-of-type(evenn + 4) {
     background-color: orange;
 }
 
 /* ! Temporaneo */
-section:nth-of-type(odd + 3) {
+section:nth-of-type(oddn + 3) {
     background-color: turquoise;
 }
 
