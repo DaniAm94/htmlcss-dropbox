@@ -133,12 +133,12 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 15px 30px;
+    padding: 0 30px;
     color: hsl(0deg 0% 36.86%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 100px;
+    height: 80px;
     font-size: 1.2rem;
     z-index: 1;
     box-shadow: 0 2px 10px lightgrey;
@@ -407,10 +407,36 @@ section {
 }
 
 #faq li {
-    font-weight: bold;
     padding: 40px 0;
-    padding-right: 30px;
     border-top: 1px solid black;
+
+}
+
+#faq p {
+    margin-top: 40px;
+    display: none;
+}
+
+#faq li:hover p {
+    display: block;
+}
+
+#faq li:hover .fa-angle-up {
+    display: none;
+}
+
+#faq .fa-angle-down {
+    display: none;
+}
+
+#faq li:hover .fa-angle-down {
+    display: inline;
+}
+
+
+#faq li>div {
+    font-weight: bold;
+    padding-right: 30px;
     display: flex;
     justify-content: space-between;
 }
