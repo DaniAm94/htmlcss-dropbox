@@ -192,11 +192,6 @@ h1 {
 
 /* Main */
 
-/* ! Temporaneo */
-section:nth-of-type(2n + 6) {
-    background-color: orange;
-}
-
 section {
     padding: 100px 0;
     width: 100vw;
@@ -406,17 +401,49 @@ section {
 #trial-free .small-container {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+}
+
+#trial-free h2 {
+    color: hsl(339.69deg 60.75% 20.98%);
+    font-size: 45px;
+}
+
+#trial-free .btn {
+    border: none;
+    padding: 15px 50px;
 }
 
 /* Sezione FAQ */
-#faq ul {
-    margin-top: 40px;
+#faq h2 {
+    margin-bottom: 40px;
+}
+
+#faq h2 {
+    font-size: 45px;
 }
 
 #faq li {
+    font-weight: bold;
     padding: 40px 0;
+    padding-right: 30px;
     border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+#faq li:last-child {
     border-bottom: 1px solid black;
+
+}
+
+#faq .sub-list {
+    display: none;
+    padding: 0;
+}
+
+#faq .list:hover+.sub-list {
+    display: flex;
 }
 
 /* Footer */
