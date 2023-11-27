@@ -8,7 +8,7 @@
 /* Generics */
 body {
     font-family: 'Open Sans', sans-serif;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 img {
@@ -38,6 +38,7 @@ a {
 
 .btn-small {
     padding: 10px 20px;
+    line-height: normal;
 }
 
 .btn {
@@ -49,9 +50,18 @@ a {
     color: white;
 }
 
+.btn-blue:hover {
+    box-shadow: 0 0 10px white inset;
+}
+
+.btn-white:hover {
+    border-color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.6);
+}
+
 .btn-white {
-    border: 2px solid hsl(0deg 0% 12.94%);
-    color: hsl(0deg 0% 12.94%);
+    border: 2px solid black;
+    color: black;
     background-color: white;
 }
 
@@ -118,6 +128,16 @@ a {
     background-color: hsl(0deg 0% 96.08%);
 }
 
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.height-contain {
+    /* height: 40%; */
+}
+
+/* ! Give Relative to the parent */
 .position-center {
     position: absolute;
     top: 50%;
@@ -155,12 +175,22 @@ header ul {
     gap: 60px;
 }
 
+header li {
+    height: 80px;
+    line-height: 80px;
+}
+
+header img {}
+
+header li:hover {
+    box-shadow: 0 2px black;
+}
+
 /* JUMBOTRON */
 
 .jumbotron {
     display: flex;
     align-items: center;
-    width: 100vw;
 }
 
 .jumbotron .large-container {
@@ -194,7 +224,6 @@ h1 {
 
 section {
     padding: 100px 0;
-    width: 100vw;
 }
 
 /* Sezione payment plans */
@@ -339,49 +368,50 @@ section {
 
 .container-free {
     display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
     margin-top: 100px;
 }
 
-.banner-squared {
+.big-box {
     flex-basis: calc(100% / 3);
     height: calc(100vw / 3);
     display: flex;
     flex-wrap: wrap;
 }
 
-.banner-squared:nth-of-type(2) {
+.big-box:nth-of-type(2) {
     padding: 50px 50px;
     display: block;
 }
 
-.banner-squared hr {
+.big-box hr {
     color: grey;
     width: 20%;
 }
 
-.banner-squared:nth-of-type(2)>* {
+.big-box:nth-of-type(2)>* {
     margin-bottom: 50px;
 }
 
-.banner-squared>img {
+.big-box>img {
     max-width: 50%;
     height: auto;
 }
 
-.banner-small {
+.small-box {
     flex-basis: calc(100% / 2);
     height: calc(100% / 2);
     position: relative;
+    border: 20px solid transparent;
 }
 
-.banner-small:not(.bg-yellow)>img {
-    padding: 0 60px;
+.small-box:hover {
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
-.banner-small img {
-    filter: invert();
+.small-box>img {
+    width: 55%;
+    height: auto;
+    filter: invert(1);
 }
 
 /* Sezione Free Trial */
@@ -481,6 +511,10 @@ footer table th {
 footer table td {
     height: 40px;
     line-height: 40px;
+}
+
+footer a:hover {
+    text-shadow: 2px 2px 10px white;
 }
 
 #language {
